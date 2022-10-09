@@ -3,6 +3,7 @@ import axios from "axios";
 
 import Search from "./Search";
 import Table from "./Table";
+import Footer from "./Footer";
 
 import "./Weather.css";
 
@@ -27,7 +28,10 @@ export default function Weather() {
     <div className="Weather">
       <h1>Weather App</h1>
       <Search responseWeather={responseWeather} getApiData={getApiData} />
-      <Table data={data} />
+      <div className="content-section">
+        <Table data={data} />
+      </div>
+      <Footer />
     </div>
   );
 }
