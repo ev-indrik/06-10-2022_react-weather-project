@@ -1,6 +1,6 @@
 .Weather {
   max-width: 300px;
-  min-height: 410px;
+  min-height: 450px;
   margin: 0 auto;
   padding: 20px 40px;
   box-shadow: 22px -16px 28px -15px rgba(0, 0, 0, 0.37);
@@ -12,4 +12,14 @@
     #fffb7d 50%,
     #a9f8f9 100%
   );
+}
+
+.Weather h1 {
+  font-size: 28px;
+  color: #0d6efd;
+}
+
+.Weather h2 {
+  font-size: 22px;
+  color: #0d6efd;
 }
