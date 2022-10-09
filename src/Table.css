@@ -1,8 +1,13 @@
 li {
-  line-height: 2;
+  line-height: 1.7;
   font-size: 16px;
 }
 
 img {
   vertical-align: middle;
+}
+
+div .ReactAnimatedWeather {
+  display: flex;
+  justify-content: flex-end;
 }

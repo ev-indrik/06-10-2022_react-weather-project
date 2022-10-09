@@ -1,4 +1,5 @@
 import React from "react";
+import ReactAnimatedWeather from "react-animated-weather";
 import "./Table.css";
 
 export default function Table(props) {
@@ -18,6 +19,15 @@ export default function Table(props) {
       </ul>
     );
   } else {
-    return null;
+    return (
+      <div className="ReactAnimatedWeather">
+        <ReactAnimatedWeather
+          icon="CLEAR_DAY"
+          color="goldenrod"
+          size={120}
+          animate={true}
+        />
+      </div>
+    );
   }
 }
