@@ -1,0 +1,15 @@
+.Weather {
+  max-width: 300px;
+  min-height: 410px;
+  margin: 0 auto;
+  padding: 20px 40px;
+  box-shadow: 22px -16px 28px -15px rgba(0, 0, 0, 0.37);
+  text-align: left;
+  border-radius: 10px;
+  background-image: linear-gradient(
+    45deg,
+    #5afda4 0%,
+    #fffb7d 50%,
+    #a9f8f9 100%
+  );
+}
