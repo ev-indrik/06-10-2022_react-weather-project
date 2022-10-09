@@ -1,0 +1,14 @@
+body {
+  background-color: #e7ffde;
+  background-image: linear-gradient(
+    168deg,
+    #e7ffde 0%,
+    #b5fffc 50%,
+    #ffffff 100%
+  );
+}
+
+.App {
+  margin: 40px;
+  font-family: "Roboto", sans-serif;
+}
