@@ -6,7 +6,10 @@ export default function Footer() {
     <div className="Footer">
       <p>
         coded by Ev Budko and{" "}
-        <a href="https://github.com/ev-indrik/06-10-2022_react-weather-project">
+        <a
+          href="https://github.com/ev-indrik/06-10-2022_react-weather-project"
+          target="_blank"
+        >
           open-sourced
         </a>{" "}
       </p>
