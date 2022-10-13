@@ -6,8 +6,8 @@ export default function Table(props) {
   if (props.data) {
     return (
       <div className="Table">
-        <h2>{`City: ${props.data.name}`}</h2>
-        <ul className="Table">
+        <h2>{`🏙️ ${props.data.name}`}</h2>
+        <ul className="Table mt-4">
           <li>{`Temperature: ${Math.round(props.data.main.temp)}`}</li>
           <li>{`Description: ${props.data.weather[0].main}`}</li>
           <li>{`Humidity: ${props.data.main.humidity}%`}</li>
@@ -23,11 +23,11 @@ export default function Table(props) {
     );
   } else {
     return (
-      <div className="ReactAnimatedWeather">
+      <div className="ReactAnimatedWeather mt-5 me-4">
         <ReactAnimatedWeather
           icon="CLEAR_DAY"
           color="goldenrod"
-          size={120}
+          size={180}
           animate={true}
         />
       </div>

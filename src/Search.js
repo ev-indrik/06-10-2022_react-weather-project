@@ -13,21 +13,24 @@ export default function Search(props) {
   }
 
   return (
-    // <form onSubmit={handleSubmit}>
-    //   <input type="serach" placeholder="enter a city" onChange={updateCity} />
-    //   <input type="submit" value="Search" />
-    // </form>
     <Form onSubmit={handleSubmit}>
-      <Form.Group className="mb-3">
-        <Form.Control
-          type="search"
-          placeholder="Enter city here.."
-          onChange={updateCity}
-        />
-      </Form.Group>
-      <Button variant="primary" type="submit" size="sm" className="mb-3">
-        Search
-      </Button>
+      <div className="row">
+        <div className="col-8">
+          <Form.Group className="mb-3">
+            <Form.Control
+              type="search"
+              placeholder="Enter city here.."
+              autoFocus="on"
+              onChange={updateCity}
+            />
+          </Form.Group>
+        </div>
+        <div className="col-4">
+          <Button variant="primary" type="submit" className="mb-4 w-100">
+            Search
+          </Button>
+        </div>
+      </div>
     </Form>
   );
 }
