@@ -1,5 +1,6 @@
 @media (max-width: 800px) {
-  .Search Form {
-    font-size: small;
+  Form .btn,
+  input.form-control {
+    font-size: 12px;
   }
 }
