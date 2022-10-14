@@ -1,6 +1,7 @@
 li {
   line-height: 1.7;
   font-size: 16px;
+  list-style-type: circle;
 }
 
 img {
