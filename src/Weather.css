@@ -14,6 +14,17 @@
   );
 }
 
+@media (max-width: 800px) {
+  .Weather {
+    width: 80vw;
+    min-height: 100vh;
+    font-size: 14px;
+  }
+  .Weathere h1 {
+    font-size: 18px;
+  }
+}
+
 div .Weather {
   display: flex;
   flex-direction: column;
