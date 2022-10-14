@@ -12,3 +12,10 @@ body {
   margin: 40px;
   font-family: "Roboto", sans-serif;
 }
+@media (max-width: 800px) {
+  .container {
+    max-width: none;
+    padding-left: 0;
+    margin: 0;
+  }
+}
