@@ -26,11 +26,12 @@ export default function Weather() {
 
   return (
     <div className="Weather">
-      <h1>Weather App</h1>
+      <h1 className="mb-3">Weather App</h1>
       <Search responseWeather={responseWeather} getApiData={getApiData} />
       <div className="content-section">
         <Table data={data} />
       </div>
+
       <Footer />
     </div>
   );

@@ -23,11 +23,11 @@ export default function Table(props) {
     );
   } else {
     return (
-      <div className="ReactAnimatedWeather mt-5 me-4">
+      <div className="ReactAnimatedWeather mt-5 d-flex justify-content-center">
         <ReactAnimatedWeather
           icon="CLEAR_DAY"
           color="goldenrod"
-          size={180}
+          size={160}
           animate={true}
         />
       </div>
