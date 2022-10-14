@@ -17,10 +17,10 @@
 @media (max-width: 800px) {
   .Weather {
     width: 80vw;
-    min-height: 80vh;
+    min-height: 70vh;
     font-size: 14px;
   }
-  .Weathere h1 {
+  .Weather h1 {
     font-size: 18px;
   }
 }

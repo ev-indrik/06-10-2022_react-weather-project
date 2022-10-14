@@ -8,14 +8,20 @@ body {
   );
 }
 
+.container {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
-  margin: 40px;
+  margin: 30px;
   font-family: "Roboto", sans-serif;
 }
+
 @media (max-width: 800px) {
   .container {
     max-width: none;
-    padding-left: 0;
+    padding-left: 0 !important;
     margin: 0;
   }
 }
