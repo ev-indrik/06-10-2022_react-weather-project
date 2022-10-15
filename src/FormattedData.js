@@ -4,13 +4,13 @@ export default function FormattedData(props) {
   let date = new Date(props.data.dt * 1000);
 
   let days = [
+    "Sunday",
     "Monday",
     "Tuesday",
     "Wednesday",
     "Thursday",
     "Friday",
     "Saturday",
-    "Sunday",
   ];
 
   let day = days[date.getDay()];
