@@ -1,14 +1,17 @@
 import React from "react";
 import ReactAnimatedWeather from "react-animated-weather";
+import FormattedData from "./FormattedData";
 import "./Table.css";
 
 export default function Table(props) {
   if (props.data) {
     return (
       <div className="Table">
-        <h2>{`🏙️ ${props.data.name}`}</h2>
+        <h2>
+          {`🏙️ ${props.data.name}`} <FormattedData data={props.data} />
+        </h2>
         <ul className="Table mt-4">
-          <li>{`Temperature: ${Math.round(props.data.main.temp)}`}</li>
+          <li>{`Temperature: ${Math.round(props.data.main.temp)}°C`}</li>
           <li>{`Description: ${props.data.weather[0].main}`}</li>
           <li>{`Humidity: ${props.data.main.humidity}%`}</li>
           <li>{`Wind: ${Math.round(props.data.wind.speed)} km/h`}</li>
