@@ -4,6 +4,11 @@ li {
   list-style-type: circle;
 }
 
+li:last-child {
+  margin-top: 10px;
+  list-style-type: none;
+}
+
 img {
   vertical-align: middle;
 }

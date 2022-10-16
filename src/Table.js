@@ -1,6 +1,7 @@
 import React from "react";
 import ReactAnimatedWeather from "react-animated-weather";
 import FormattedData from "./FormattedData";
+import WeatherIcons from "./WeatherIcons";
 import "./Table.css";
 
 export default function Table(props) {
@@ -12,14 +13,11 @@ export default function Table(props) {
         </h2>
         <ul className="Table mt-4">
           <li>{`Temperature: ${Math.round(props.data.main.temp)}°C`}</li>
-          <li>{`Description: ${props.data.weather[0].main}`}</li>
           <li>{`Humidity: ${props.data.main.humidity}%`}</li>
           <li>{`Wind: ${Math.round(props.data.wind.speed)} km/h`}</li>
+          <li>{`Description: ${props.data.weather[0].main}`}</li>
           <li>
-            <img
-              src={`http://openweathermap.org/img/wn/${props.data.weather[0].icon}@2x.png`}
-              alt="icon"
-            />
+            <WeatherIcons data={props.data} />
           </li>
         </ul>
       </div>
