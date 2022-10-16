@@ -1,0 +1,8 @@
+.CelsiusFahrenheit a {
+  text-decoration: none;
+  color: #0d6efd;
+}
+
+.CelsiusFahrenheit a:hover {
+  color: #f03a17;
+}

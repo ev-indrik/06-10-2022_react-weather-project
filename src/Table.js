@@ -2,6 +2,7 @@ import React from "react";
 import ReactAnimatedWeather from "react-animated-weather";
 import FormattedData from "./FormattedData";
 import WeatherIcons from "./WeatherIcons";
+import CelsiusFahrenheit from "./CelsiusFahrenheit";
 import "./Table.css";
 
 export default function Table(props) {
@@ -12,7 +13,9 @@ export default function Table(props) {
           {`🏙️ ${props.data.name}`} <FormattedData data={props.data} />
         </h2>
         <ul className="Table mt-4">
-          <li>{`Temperature: ${Math.round(props.data.main.temp)}°C`}</li>
+          <li>
+            <CelsiusFahrenheit temp={props.data.main.temp} />
+          </li>
           <li>{`Humidity: ${props.data.main.humidity}%`}</li>
           <li>{`Wind: ${Math.round(props.data.wind.speed)} km/h`}</li>
           <li>{`Description: ${props.data.weather[0].main}`}</li>
