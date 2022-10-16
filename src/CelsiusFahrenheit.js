@@ -33,7 +33,7 @@ export default function CelsiusFahrenheit(data) {
           {" "}
           °C
         </a>{" "}
-        | °F
+        |°F
       </div>
     );
   }
