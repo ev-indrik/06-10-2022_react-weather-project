@@ -24,9 +24,27 @@ export default function FormattedData(props) {
     minutes = `0${minutes}`;
   }
 
+  let monthes = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "TMay",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  let month = monthes[date.getMonth()];
+
+  let monthday = date.getDate();
+
   return (
-    <div className="fs-5 mt-3">
-      📅{day} ⌚{hours}:{minutes}
+    <div className="fs-6 mt-3">
+      📅{month}, {monthday} • {day} ⌚{hours}:{minutes}
     </div>
   );
 }
