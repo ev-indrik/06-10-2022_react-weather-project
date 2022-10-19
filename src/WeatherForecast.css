@@ -1,6 +1,8 @@
 .WeatherForecast {
   text-align: center;
   font-size: 12px;
+  border-radius: 7px;
+  background: linear-gradient(45deg, #5afda4 0%, #fffb7d 50%, #a9f8f9 100%);
 }
 .temperature-min {
   opacity: 0.6;
