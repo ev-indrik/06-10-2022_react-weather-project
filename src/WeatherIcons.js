@@ -47,9 +47,9 @@ export default function WeatherIcons(props) {
   return (
     <div className="d-inline align-middle">
       <ReactAnimatedWeather
-        icon={codeMapping[props.data.weather[0].icon]}
-        color={iconColor[props.data.weather[0].icon]}
-        size={60}
+        icon={codeMapping[props.data]}
+        color={iconColor[props.data]}
+        size={props.size}
         animate={true}
       />
     </div>

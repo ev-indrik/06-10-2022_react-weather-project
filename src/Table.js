@@ -20,18 +20,18 @@ export default function Table(props) {
           <li>{`Wind: ${Math.round(props.data.wind.speed)} km/h`}</li>
           <li>{`Description: ${props.data.weather[0].main}`}</li>
           <li>
-            <WeatherIcons data={props.data} />
+            <WeatherIcons data={props.data.weather[0].icon} size={60} />
           </li>
         </ul>
       </div>
     );
   } else {
     return (
-      <div className="ReactAnimatedWeather mt-5 d-flex justify-content-center">
+      <div className="ReactAnimatedWeather mt-4 d-flex justify-content-center">
         <ReactAnimatedWeather
           icon="CLEAR_DAY"
           color="goldenrod"
-          size={160}
+          size={140}
           animate={true}
         />
       </div>
