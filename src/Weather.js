@@ -32,7 +32,8 @@ export default function Weather() {
       <div className="content-section">
         <Table data={data} />
       </div>
-      <WeatherForecast />
+      <WeatherForecast data={data} />
+
       <Footer />
     </div>
   );
