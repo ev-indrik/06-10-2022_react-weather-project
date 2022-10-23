@@ -1,8 +1,8 @@
 import React from "react";
 import ReactAnimatedWeather from "react-animated-weather";
-import FormattedData from "./FormattedData";
-import WeatherIcons from "./WeatherIcons";
-import CelsiusFahrenheit from "./CelsiusFahrenheit";
+import FormattedData from "../weather-forecast/FormattedData";
+import WeatherIcons from "../weather-forecast/WeatherIcons";
+import CelsiusFahrenheit from "../weather-forecast/CelsiusFahrenheit";
 import "./Table.css";
 
 export default function Table(props) {

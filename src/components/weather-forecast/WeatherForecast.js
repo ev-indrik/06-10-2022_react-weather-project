@@ -32,9 +32,7 @@ export default function WeatherForecast(props) {
           {result.data.daily.map(
             (itemForecast, index) =>
               index < 5 && (
-                <div className="col">
-                  <WeatherForecastDay dailyForecast={itemForecast} />
-                </div>
+                <WeatherForecastDay dailyForecast={itemForecast} key={index} />
               )
           )}
         </div>

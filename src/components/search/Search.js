@@ -16,7 +16,7 @@ export default function Search(props) {
   return (
     <Form onSubmit={handleSubmit}>
       <div className="row">
-        <div className="col-8">
+        <div className="col-8 input-wrapper">
           <Form.Group className="mb-3">
             <Form.Control
               type="search"
@@ -26,7 +26,7 @@ export default function Search(props) {
             />
           </Form.Group>
         </div>
-        <div className="col-4">
+        <div className="col-4 button-wrapper">
           <Button variant="primary" type="submit" className="mb-4 w-100">
             Search
           </Button>

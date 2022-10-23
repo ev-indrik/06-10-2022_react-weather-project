@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-import Search from "./Search";
-import Table from "./Table";
-import Footer from "./Footer";
-import WeatherForecast from "./WeatherForecast";
+import Table from "./components/table/Table";
+import Footer from "./components/footer/Footer";
+import WeatherForecast from "./components/weather-forecast/WeatherForecast";
+import Search from "./components/search/Search";
 
 import "./Weather.css";
 

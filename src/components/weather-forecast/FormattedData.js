@@ -43,8 +43,9 @@ export default function FormattedData(props) {
   let monthday = date.getDate();
 
   return (
-    <div className="fs-6 mt-3">
-      📅{month}, {monthday} • {day} ⌚{hours}:{minutes}
+    <div className="fs-6 mt-3 lh-base">
+      📅{month}, {monthday} • {day}
+      <br />⌚{hours}:{minutes}
     </div>
   );
 }

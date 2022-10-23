@@ -1,0 +1,17 @@
+@media (max-width: 800px) {
+  Form .btn,
+  input.form-control {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .button-wrapper {
+    padding-right: 10px !important;
+  }
+
+  .input-wrapper {
+    padding-right: 0 !important;
+    padding-left: 10px !important;
+  }
+}

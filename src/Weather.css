@@ -25,6 +25,13 @@
   }
 }
 
+@media (max-width: 576px) {
+  .Weather {
+    width: 95vw;
+    padding: 15px 10px;
+  }
+}
+
 div .Weather {
   display: flex;
   flex-direction: column;
