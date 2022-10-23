@@ -22,12 +22,19 @@ export default function WeatherForecast(props) {
       });
   }
   return (
-    <div className="WeatherForecast">
-      <div className="row">
-        <div className="col">
-          <WeatherForecastDay dailyForecast={result} />
+    result && (
+      <div className="WeatherForecast">
+        <div className="row">
+          {result.data.daily.map(
+            (itemForecast, index) =>
+              index < 5 && (
+                <div className="col">
+                  <WeatherForecastDay dailyForecast={itemForecast} />
+                </div>
+              )
+          )}
         </div>
       </div>
-    </div>
+    )
   );
 }
