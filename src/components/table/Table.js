@@ -12,6 +12,7 @@ export default function Table(props) {
         <h2>
           {`🏙️ ${props.data.name}`} <FormattedData data={props.data} />
         </h2>
+
         <ul className="Table mt-4">
           <li>
             <CelsiusFahrenheit temp={props.data.main.temp} />
@@ -27,11 +28,11 @@ export default function Table(props) {
     );
   } else {
     return (
-      <div className="ReactAnimatedWeather mt-4 d-flex justify-content-center">
+      <div className="ReactAnimatedWeather mt-5 d-flex justify-content-center ">
         <ReactAnimatedWeather
           icon="CLEAR_DAY"
           color="goldenrod"
-          size={140}
+          size={150}
           animate={true}
         />
       </div>

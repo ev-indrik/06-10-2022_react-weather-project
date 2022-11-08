@@ -1,22 +1,23 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import CurrentPosition from "./CurrentPosition";
 import "./Search.css";
 
-export default function Search(props) {
+export default function Search({ responseWeather, getApiData, gpsClick2 }) {
   function updateCity(event) {
-    props.responseWeather(event.target.value);
+    responseWeather(event.target.value);
   }
 
   function handleSubmit(event) {
     event.preventDefault();
-    props.getApiData();
+    getApiData();
   }
 
   return (
     <Form onSubmit={handleSubmit}>
       <div className="row">
-        <div className="col-8 input-wrapper">
+        <div className="col-7 input-wrapper">
           <Form.Group className="mb-3">
             <Form.Control
               type="search"
@@ -27,9 +28,14 @@ export default function Search(props) {
           </Form.Group>
         </div>
         <div className="col-4 button-wrapper">
-          <Button variant="primary" type="submit" className="mb-4 w-100">
+          <Button
+            variant="primary"
+            type="submit"
+            className="search-button mb-4 me-1 w-100"
+          >
             Search
           </Button>
+          <CurrentPosition gpsClick2={gpsClick2} />
         </div>
       </div>
     </Form>

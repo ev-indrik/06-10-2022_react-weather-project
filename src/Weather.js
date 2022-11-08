@@ -8,11 +8,29 @@ import Search from "./components/search/Search";
 
 import "./Weather.css";
 
-export default function Weather() {
+const Weather = () => {
+  const gpsClick2 = () => {
+    // GPS position function
+
+    navigator.geolocation.getCurrentPosition((response) => {
+      let latitude = response.coords.latitude;
+      let longitude = response.coords.longitude;
+      let apiUrl2 = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+
+      axios.get(apiUrl2).then((res) => {
+        // const info = {
+        //   name: res.data.name,
+        //   date: res.data.dt,
+        //   humidity: res.data.humidity,
+        // };
+        setData(res.data);
+      });
+    });
+  };
+
   let [city, setCity] = useState("");
   let apiKey = "e198a574d16b9223ea11e9b7c93f17a0";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-
   let [data, setData] = useState();
 
   function responseWeather(userCityInput) {
@@ -20,15 +38,24 @@ export default function Weather() {
   }
 
   function getApiData() {
-    axios.get(apiUrl).then((response) => {
-      setData(response.data);
-    });
+    if (city) {
+      axios.get(apiUrl).then((response) => {
+        setData(response.data);
+      });
+    } else {
+      alert("Please, enter valid city name!");
+    }
   }
 
   return (
     <div className="Weather">
       <h1 className="mb-3">Weather App</h1>
-      <Search responseWeather={responseWeather} getApiData={getApiData} />
+      <Search
+        responseWeather={responseWeather}
+        getApiData={getApiData}
+        gpsClick2={gpsClick2}
+      />
+
       <div className="content-section">
         <Table data={data} />
       </div>
@@ -37,4 +64,6 @@ export default function Weather() {
       <Footer />
     </div>
   );
-}
+};
+
+export default Weather;
