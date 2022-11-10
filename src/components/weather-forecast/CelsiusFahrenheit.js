@@ -28,7 +28,7 @@ export default function CelsiusFahrenheit(data) {
   } else {
     return (
       <div className="CelsiusFahrenheit">
-        {`${Math.round(temperature * 1.8 + 32)}`}
+        {`Temperature: ${Math.round(temperature * 1.8 + 32)}`}
         <a href="/" onClick={showCelsius}>
           {" "}
           °C
