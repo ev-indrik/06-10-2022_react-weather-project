@@ -5,23 +5,23 @@ import WeatherIcons from "../weather-forecast/WeatherIcons";
 import CelsiusFahrenheit from "../weather-forecast/CelsiusFahrenheit";
 import "./Table.css";
 
-export default function Table(props) {
-  if (props.data) {
+export default function Table({ data }) {
+  if (data) {
     return (
       <div className="Table">
         <h2>
-          {`🏙️ ${props.data.name}`} <FormattedData data={props.data} />
+          {`🏙️ ${data.name}`} <FormattedData data={data} />
         </h2>
 
         <ul className="Table mt-4">
           <li>
-            <CelsiusFahrenheit temp={props.data.main.temp} />
+            <CelsiusFahrenheit temp={data.temperature} />
           </li>
-          <li>{`Humidity: ${props.data.main.humidity}%`}</li>
-          <li>{`Wind: ${Math.round(props.data.wind.speed)} km/h`}</li>
-          <li>{`Description: ${props.data.weather[0].main}`}</li>
+          <li>{`Humidity: ${data.humidity}%`}</li>
+          <li>{`Wind: ${Math.round(data.wind)} km/h`}</li>
+          <li>{`Description: ${data.description}`}</li>
           <li>
-            <WeatherIcons data={props.data.weather[0].icon} size={60} />
+            <WeatherIcons data={data.icon} size={60} />
           </li>
         </ul>
       </div>

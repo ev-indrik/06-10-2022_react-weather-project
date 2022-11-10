@@ -18,12 +18,18 @@ const Weather = () => {
       let apiUrl2 = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
 
       axios.get(apiUrl2).then((res) => {
-        // const info = {
-        //   name: res.data.name,
-        //   date: res.data.dt,
-        //   humidity: res.data.humidity,
-        // };
-        setData(res.data);
+        const info = {
+          name: res.data.name,
+          date: res.data.dt,
+          temperature: res.data.main.temp,
+          humidity: res.data.main.humidity,
+          wind: res.data.wind.speed,
+          description: res.data.weather[0].description,
+          icon: res.data.weather[0].icon,
+          coordinates: res.data.coord,
+        };
+
+        setData(info);
       });
     });
   };
@@ -39,8 +45,18 @@ const Weather = () => {
 
   function getApiData() {
     if (city) {
-      axios.get(apiUrl).then((response) => {
-        setData(response.data);
+      axios.get(apiUrl).then((res) => {
+        const info = {
+          name: res.data.name,
+          date: res.data.dt,
+          temperature: res.data.main.temp,
+          humidity: res.data.main.humidity,
+          wind: res.data.wind.speed,
+          description: res.data.weather[0].description,
+          icon: res.data.weather[0].icon,
+          coordinates: res.data.coord,
+        };
+        setData(info);
       });
     } else {
       alert("Please, enter valid city name!");

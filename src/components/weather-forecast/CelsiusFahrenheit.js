@@ -19,7 +19,7 @@ export default function CelsiusFahrenheit(data) {
   if (unit === "celsius") {
     return (
       <div className="CelsiusFahrenheit">
-        {`${Math.round(temperature)} °C |`}
+        {`Temperature: ${Math.round(temperature)} °C |`}
         <a href="/" onClick={showFahrenheit}>
           °F
         </a>

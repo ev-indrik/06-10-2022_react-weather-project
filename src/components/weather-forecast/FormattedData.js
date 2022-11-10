@@ -1,7 +1,7 @@
 import React from "react";
 
-export default function FormattedData(props) {
-  let date = new Date(props.data.dt * 1000);
+export default function FormattedData({ data }) {
+  let date = new Date(data.date * 1000);
 
   let days = [
     "Sunday",
